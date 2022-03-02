@@ -49,16 +49,14 @@ export const App: FC = () => {
   return (
     <div className="top-wrapper">
         <img className="bg-image" src={BG} alt="" />
-        <ConnectionProvider endpoint={endpoint}>
-          <WalletProvider wallets={wallets}>
-            <div className="App">
-              <header className="App-header">
-                <MyWallet />
-                <SendTokens />
-              </header>
-            </div>
-          </WalletProvider>
-        </ConnectionProvider>
+        <div className="App">
+            <ConnectionProvider endpoint={endpoint}>
+                <WalletProvider wallets={wallets}>
+                    <MyWallet />
+                    <SendTokens />
+                 </WalletProvider>
+            </ConnectionProvider>
+        </div>
         <div className="footer">
             <a href="https://twitter.com/HighSocietyNFTs">
                 <img src={twitterLogo} alt="" />
