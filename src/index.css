@@ -1,0 +1,13 @@
+@import './reset.css';
+
+html, body {
+    background-color: #FFFFFF;
+    color: #303030;
+}
+
+/* #app {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
