@@ -20,6 +20,9 @@ import {
 import { clusterApiUrl } from "@solana/web3.js";
 import MyWallet from "./components/WalletConnection/WalletConnection";
 import { SendTokens } from './components/SendTokens/SendTokens';
+import twitterLogo from './assets/twitter-logo.svg';
+import discordLogo from './assets/discord.png';
+import BG from 'url:./assets/bg.png';
 
 export const App: FC = () => {
   // Can be set to 'devnet', 'testnet', or 'mainnet-beta'
@@ -44,15 +47,26 @@ export const App: FC = () => {
   );
 
   return (
-    <ConnectionProvider endpoint={endpoint}>
-      <WalletProvider wallets={wallets}>
-        <div className="App">
-          <header className="App-header">
-            <MyWallet />
-            <SendTokens />
-          </header>
+    <div className="top-wrapper">
+        <img className="bg-image" src={BG} alt="" />
+        <ConnectionProvider endpoint={endpoint}>
+          <WalletProvider wallets={wallets}>
+            <div className="App">
+              <header className="App-header">
+                <MyWallet />
+                <SendTokens />
+              </header>
+            </div>
+          </WalletProvider>
+        </ConnectionProvider>
+        <div className="footer">
+            <a href="https://twitter.com/HighSocietyNFTs">
+                <img src={twitterLogo} alt="" />
+            </a>
+            <a href="https://discord.com/invite/highsociety">
+                <img src={discordLogo} alt="" />
+            </a>
         </div>
-      </WalletProvider>
-    </ConnectionProvider>
+    </div>
   );
 };
