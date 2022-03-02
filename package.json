@@ -1,10 +1,10 @@
 {
-  "name": "solana-base-app",
+  "name": "solana-breeding",
   "version": "0.1.3",
-  "author": "Ujjwal Gupta",
+  "author": "Anvit Mangal",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/UjjwalGupta49/solana-base-app.git"
+    "url": "git+https://github.com/anvitmangal/solana-breeding"
   },
   "license": "ISC",
   "publishConfig": {
@@ -35,6 +35,7 @@
     "nuke": "shx rm -rf node_modules yarn.lock"
   },
   "dependencies": {
+    "@babel/runtime": "^7.17.2",
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@mui/icons-material": "^5.3.0",
@@ -46,7 +47,7 @@
     "@solana/wallet-adapter-base": "^0.9.2",
     "@solana/wallet-adapter-react": "^0.15.2",
     "@solana/wallet-adapter-react-ui": "^0.9.3",
-    "@solana/wallet-adapter-wallets": "^0.14.2",
+    "@solana/wallet-adapter-wallets": "^0.15.4",
     "@solana/web3.js": "^1.34.0",
     "bignumber.js": "^9.0.2",
     "colors": "^1.4.0",
