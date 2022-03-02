@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
 // import logo from "./logo.svg";
 import "./App.css";
-require('@solana/wallet-adapter-react-ui/styles.css');
+import "./styles.css";
+// require('@solana/wallet-adapter-react-ui/styles.css');
 import {
   ConnectionProvider,
   WalletProvider,
