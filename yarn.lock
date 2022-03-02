@@ -1334,6 +1334,22 @@
     "@solana/wallet-adapter-base" "^0.9.3"
     "@solana/web3.js" "^1.20.0"
 
+"@solana/wallet-adapter-glow@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@solana/wallet-adapter-glow/-/wallet-adapter-glow-0.1.0.tgz#86c97ada8b197bcdf9efe831bef121b399ab4e07"
+  integrity sha512-gmML6XuHI/oIos8JpLQF21+xrNStaQrdS2wurQhOgH20V6AVczAH+8+GfmD4bVJ6MRo+h981N6/K0I5NuEbVOg==
+  dependencies:
+    "@solana/wallet-adapter-base" "^0.9.3"
+    "@solana/web3.js" "^1.20.0"
+
+"@solana/wallet-adapter-huobi@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@solana/wallet-adapter-huobi/-/wallet-adapter-huobi-0.1.0.tgz#aa5158e9b2d79e753c2da55f26609777eb4651c6"
+  integrity sha512-VdJT/eSO1qhVYODV+BYEptqlZoy3YhZHJsP0+4EdrBcyFqg8MHu1+kZujhMThccWoZmpl+CcetnYHuxz7EYZdg==
+  dependencies:
+    "@solana/wallet-adapter-base" "^0.9.4"
+    "@solana/web3.js" "^1.20.0"
+
 "@solana/wallet-adapter-ledger@^0.9.8":
   version "0.9.9"
   resolved "https://registry.yarnpkg.com/@solana/wallet-adapter-ledger/-/wallet-adapter-ledger-0.9.9.tgz#5f24e8275c9b3420f9c91da08440eaf974b669c7"
@@ -1361,7 +1377,20 @@
     "@solana/wallet-adapter-base" "^0.9.3"
     "@solana/web3.js" "^1.20.0"
 
-"@solana/wallet-adapter-react-ui@^0.9.3":
+"@solana/wallet-adapter-react-ui-starter@^0.9.3":
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/@solana/wallet-adapter-react-ui-starter/-/wallet-adapter-react-ui-starter-0.9.3.tgz#7a275825686c3e964e37a4172598e2a4304beac0"
+  integrity sha512-9AesD4xnK6bYS9d1K96vAXNuQRnNgqBd5FIUfTT43pp0FEUr4mSf5MNiwrRwsvDQRbfVD0xebRrpDy2VZnpr3Q==
+  dependencies:
+    "@solana/wallet-adapter-base" "^0.9.3"
+    "@solana/wallet-adapter-react" "^0.15.3"
+    "@solana/wallet-adapter-react-ui" "^0.9.5"
+    "@solana/wallet-adapter-wallets" "^0.15.0"
+    "@solana/web3.js" "^1.31.0"
+    react "^17.0.0"
+    react-dom "^17.0.0"
+
+"@solana/wallet-adapter-react-ui@^0.9.3", "@solana/wallet-adapter-react-ui@^0.9.5":
   version "0.9.5"
   resolved "https://registry.yarnpkg.com/@solana/wallet-adapter-react-ui/-/wallet-adapter-react-ui-0.9.5.tgz#ccd3a618f8485c8e7313cc53ec4fdbedf3804512"
   integrity sha512-+869B9F453K9B47FyGEuoBRSziDTu1hlWGAl2KtF3KrzxnBiu97i+GMRRfT92CQQI1pYHA/FIhIfOHwOb7b6cw==
@@ -1372,7 +1401,7 @@
     react "^17.0.0"
     react-dom "^17.0.0"
 
-"@solana/wallet-adapter-react@^0.15.2", "@solana/wallet-adapter-react@^0.15.3":
+"@solana/wallet-adapter-react@^0.15.3":
   version "0.15.3"
   resolved "https://registry.yarnpkg.com/@solana/wallet-adapter-react/-/wallet-adapter-react-0.15.3.tgz#f3122a691427769d37d0c291b7f0b0f712aa805c"
   integrity sha512-Nfd8R2WQ8kf/I4x5MzmEVth4sd5tM2sroOdvk9YzHhCo2nBg2edbQCE9rMHzMBEH6+egTA7dgQrlf0FTMHPUzw==
@@ -1444,18 +1473,20 @@
     process "^0.11.10"
     stream-browserify "^3.0.0"
 
-"@solana/wallet-adapter-wallets@^0.15.4":
-  version "0.15.4"
-  resolved "https://registry.yarnpkg.com/@solana/wallet-adapter-wallets/-/wallet-adapter-wallets-0.15.4.tgz#95821962a5b86d48b6805450fec7ca79a057a910"
-  integrity sha512-HUhCmMTykXogWBaIcFCIdM3WkXRasPF8PjPEOMZ2ZGWnW5vih6Zf4OK3fI67hMA2tNveusEPxKY9Y31l1FL2mQ==
+"@solana/wallet-adapter-wallets@^0.15.0", "@solana/wallet-adapter-wallets@^0.15.4":
+  version "0.15.5"
+  resolved "https://registry.yarnpkg.com/@solana/wallet-adapter-wallets/-/wallet-adapter-wallets-0.15.5.tgz#a4f0cb38430705d89b45872a0b4883c7ea32aa9a"
+  integrity sha512-wDy3AhfoXemIPubKasQm/yhWyA0/2mjLJbQpn9jQ/JcxSEwSeUjSrebNE3tYMZ9Pi94ShLmtN/bEHSwo7nCoug==
   dependencies:
-    "@solana/wallet-adapter-base" "^0.9.3"
+    "@solana/wallet-adapter-base" "^0.9.4"
     "@solana/wallet-adapter-bitkeep" "^0.3.2"
     "@solana/wallet-adapter-bitpie" "^0.5.2"
     "@solana/wallet-adapter-blocto" "^0.5.2"
     "@solana/wallet-adapter-clover" "^0.4.2"
     "@solana/wallet-adapter-coin98" "^0.5.2"
     "@solana/wallet-adapter-coinhub" "^0.3.2"
+    "@solana/wallet-adapter-glow" "^0.1.0"
+    "@solana/wallet-adapter-huobi" "^0.1.0"
     "@solana/wallet-adapter-ledger" "^0.9.8"
     "@solana/wallet-adapter-mathwallet" "^0.9.2"
     "@solana/wallet-adapter-phantom" "^0.9.2"
@@ -1704,9 +1735,9 @@
   integrity sha512-EEhsLsD6UsDM1yFhAvy0Cjr6VwmpMWqFBCb9w07wVugF7w9nfajxLuVmngTIpgS6svCnm6Vaw+MZhoDCKnOfsw==
 
 "@types/react-dom@^17.0.11":
-  version "17.0.12"
-  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.12.tgz#f08dfbc3c6d35084ffd3db6f09bdea8913de8494"
-  integrity sha512-SeJ430ndLI15JtRSHuzotn7AIdUtr8bdk6XW8mMfzjZo3vahRgJGHZqHiI4nAzCHTVG4qC21ObfsHBVUEHcDhg==
+  version "17.0.13"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.13.tgz#a3323b974ee4280070982b3112351bb1952a7809"
+  integrity sha512-wEP+B8hzvy6ORDv1QBhcQia4j6ea4SFIBttHYpXKPFZRviBvknq0FRh3VrIxeXUmsPkwuXVZrVGG7KUVONmXCQ==
   dependencies:
     "@types/react" "*"
 
@@ -6328,7 +6359,7 @@ rxjs@6:
   dependencies:
     tslib "^1.9.0"
 
-rxjs@^7.1.0:
+rxjs@^7.1.0, rxjs@^7.5.4:
   version "7.5.4"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.5.4.tgz#3d6bd407e6b7ce9a123e76b1e770dc5761aa368d"
   integrity sha512-h5M3Hk78r6wAheJF0a5YahB1yRQKCsZ4MsGdZ5O9ETbVtjPcScGfrMmoOq7EBsCRzd4BDkvDJ7ogP8Sz5tTFiQ==
@@ -7022,7 +7053,7 @@ tslib@^1.7.1, tslib@^1.8.1, tslib@^1.9.0:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
-tslib@^2.1.0, tslib@^2.3.0, tslib@^2.3.1:
+tslib@^2.0.0, tslib@^2.1.0, tslib@^2.3.0, tslib@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
   integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
@@ -7476,3 +7507,10 @@ yargs@^13.3.2:
     which-module "^2.0.0"
     y18n "^4.0.0"
     yargs-parser "^13.1.2"
+
+zone.js@^0.11.4:
+  version "0.11.4"
+  resolved "https://registry.yarnpkg.com/zone.js/-/zone.js-0.11.4.tgz#0f70dcf6aba80f698af5735cbb257969396e8025"
+  integrity sha512-DDh2Ab+A/B+9mJyajPjHFPWfYU1H+pdun4wnnk0OcQTNjem1XQSZ2CDW+rfZEUDjv5M19SBqAkjZi0x5wuB5Qw==
+  dependencies:
+    tslib "^2.0.0"
