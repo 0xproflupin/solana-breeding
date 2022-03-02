@@ -34,7 +34,7 @@ export const SendTokens: FC = () => {
       const publickey = publicKey.toString();
       console.log(publickey);
       const nftArray = await getParsedNftAccountsByOwner({
-        publicAddress: publicKey,
+        publicAddress: publickey,
         connection: connection
       });
 
