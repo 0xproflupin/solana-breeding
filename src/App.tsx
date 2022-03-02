@@ -1,35 +1,57 @@
 import React, { FC } from 'react';
-require('@solana/wallet-adapter-react-ui/styles.css');
+// import logo from "./logo.svg";
+import "./App.css";
 
-import './App.css';
-import { NavAppBar } from './components/Navbar/Navbar';
-import { Context } from './components/WalletConnection/WalletConnection';
+import {
+  ConnectionProvider,
+  WalletProvider,
+} from "@solana/wallet-adapter-react";
+import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
+import {
+    LedgerWalletAdapter,
+    PhantomWalletAdapter,
+    SlopeWalletAdapter,
+    SolflareWalletAdapter,
+    SolletExtensionWalletAdapter,
+    SolletWalletAdapter,
+    TorusWalletAdapter,
+} from '@solana/wallet-adapter-wallets';
+import { clusterApiUrl } from "@solana/web3.js";
+import MyWallet from "./components/WalletConnection/WalletConnection";
 import { SendTokens } from './components/SendTokens/SendTokens';
-import twitterLogo from './assets/twitter-logo.svg';
-import discordLogo from './assets/discord.png';
-import BG from 'url:./assets/bg.png';
-
-const HANDLE = ['https://twitter.com/0xprof_lupin', 'https://github.com/anvitmangal'];
 
 export const App: FC = () => {
-    return (
-        <div className="top-wrapper">
-            <img className="bg-image" src={BG} alt="" />
-            <Context>
-                <NavAppBar />
-                <div className="inner-container">
-                    <SendTokens />
-                </div>
-                </Context>
-            
-            <div className="footer">
-                <a href="#">
-                    <img src={twitterLogo} alt="" />
-                </a>
-                <a href="#">
-                    <img src={discordLogo} alt="" />
-                </a>
-            </div>
+  // Can be set to 'devnet', 'testnet', or 'mainnet-beta'
+  const network = WalletAdapterNetwork.Mainnet;
+
+  // You can also provide a custom RPC endpoint
+  const endpoint = React.useMemo(() => clusterApiUrl(network), [network]);
+
+  // @solana/wallet-adapter-wallets includes all the adapters but supports tree shaking --
+  // Only the wallets you configure here will be compiled into your application
+  const wallets = React.useMemo(
+    () => [
+        new PhantomWalletAdapter(),
+        new SlopeWalletAdapter(),
+        new SolflareWalletAdapter({ network }),
+        new TorusWalletAdapter(),
+        new LedgerWalletAdapter(),
+        new SolletWalletAdapter({ network }),
+        new SolletExtensionWalletAdapter({ network }),
+    ],
+    [network]
+  );
+
+  return (
+    <ConnectionProvider endpoint={endpoint}>
+      <WalletProvider wallets={wallets}>
+        <div className="App">
+          <header className="App-header">
+            <MyWallet />
+            <SendTokens />
+          </header>
         </div>
-    );
+      </WalletProvider>
+    </ConnectionProvider>
+  );
 };
