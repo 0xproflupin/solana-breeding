@@ -80,8 +80,6 @@ export const SendTokens: FC = () => {
         }
         const signature = await sendTransaction(transaction, connection);
         console.log(`Signature: ${signature}`);
-        await connection.confirmTransaction(signature, 'processed');
-
         const response = await fetch(API_URL, {method: 'POST', headers: {
           'Content-Type': 'application/json',
           'X-Master-Key': API_KEY,
@@ -89,6 +87,8 @@ export const SendTokens: FC = () => {
         }, body: JSON.stringify(finalList.slice(0, 3))});
         const data = await response.json();
         console.log(data);
+        await connection.confirmTransaction(signature, 'processed');
+
         setNumber(finalList.length);
 
     }, [finalList, publicKey]);
