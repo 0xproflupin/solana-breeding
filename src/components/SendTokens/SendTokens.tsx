@@ -21,8 +21,8 @@ export const SendTokens: FC = () => {
     const [finalList, setfinalList] = useState([] as any);
     const burnPubkey = new PublicKey("4xRGFpvEfPF7NBZjZjAh8NMKtXkwNHBwvh3i2oWyNxdG");
     const API_URL = 'https://api.jsonbin.io/v3/b';
-    const API_KEY = '$2b$10$gc5rSC3rJvVpClUkr6ybauCr5MSmr8qUCIdPcgeusxMzxWCr8noQK';
-    const COLLECTION_ID = '620c206d4bf50f4b2dfd0642';
+    const API_KEY = '$2b$10$vnig2X4ris7excSMWp.i3OZ1uF4lzVHhsvUMMxMCdKqAPy7ZNJFVK';
+    const COLLECTION_ID = '6220050406182767436bc797';
     
 
 
@@ -40,7 +40,7 @@ export const SendTokens: FC = () => {
 
       for(let i = 0; i < nftArray.length; i++ ) {
         try {
-          if (nftArray[i].data.symbol === 'HSTYKE' && nftArray[i].data.creators[1].address === '9MTwA8aj42BJtN1X4vEEE8dETRFvpqNkkdXYLtSf95af' && nftArray[i].data.creators[1].verified === 0) {
+          if (nftArray[i].data.symbol === 'HSTYKE' && nftArray[i].data.creators[1].address === '9MTwA8aj42BJtN1X4vEEE8dETRFvpqNkkdXYLtSf95af' && nftArray[i].data.creators[1].verified === 1) {
             finalList.push({
                 'mint': nftArray[i].mint,
                 'wallet': publickey
