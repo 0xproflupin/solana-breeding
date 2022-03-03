@@ -29,7 +29,7 @@ export const App: FC = () => {
   const network = WalletAdapterNetwork.Devnet;
 
   // You can also provide a custom RPC endpoint
-  const endpoint = 'https://dawn-young-snowflake.solana-mainnet.quiknode.pro/b2b0776cec670f986c0f309d38ba418948700734/';
+  const endpoint = 'https://ssc-dao.genesysgo.net/';
 
   // @solana/wallet-adapter-wallets includes all the adapters but supports tree shaking --
   // Only the wallets you configure here will be compiled into your application
