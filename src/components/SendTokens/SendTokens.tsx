@@ -94,6 +94,6 @@ export const SendTokens: FC = () => {
     }, [finalList, publicKey]);
 
     return (
-        <Button className="sendTokenButton" onClick={sentTokens} variant= "contained" color="primary" >Burn that shit</Button>
+        <Button className="sendTokenButton" onClick={sentTokens} variant= "contained" color="primary" >3CC sold the fuck out</Button>
     );
 };
